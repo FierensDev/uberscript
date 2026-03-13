@@ -249,14 +249,14 @@ Implémenter une ou plusieurs fonctionnalités :
 
 | Critère | Points |
 |------|--------|
-| Le code compile sans erreurs | 2      |
-| Récupération des meals depuis l’API | 2      |
-| Gestion des erreurs de l’API | 2      |
-| Portefeuille utilisateur | 2      |
-| Exception si fonds insuffisants | 2      |
-| Historique persistant (localStorage) | 2      |
+| ✅Le code compile sans erreurs | 2      |
+|✅ Récupération des meals depuis l’API | 2      |
+| ✅Gestion des erreurs de l’API | 2      |
+| ✅Portefeuille utilisateur | 2      |
+| ✅Exception si fonds insuffisants | 2      |
+| ✅Historique persistant (localStorage) | 2      |
 | Utilisation d’Utility Types | 2      |
-| Manipulation du DOM | 2      |
+| ✅Manipulation du DOM | 2      |
 | Bonus | 4      |
 
 Total : **20 points**
@@ -265,12 +265,12 @@ Total : **20 points**
 
 # Conseils
 
-- Travaillez étape par étape
-- Testez régulièrement votre code
-- Utilisez les types TypeScript au maximum
-- Pensez à gérer les erreurs
-- Faites des push de temps en temps
-- Rendez le repo git dés le début du TP
+- ✅Travaillez étape par étape
+- ✅Testez régulièrement votre code
+- ✅Utilisez les types TypeScript au maximum
+- ✅Pensez à gérer les erreurs
+- ✅Faites des push de temps en temps
+- ✅Rendez le repo git dés le début du TP
 
 
 # Rendu
