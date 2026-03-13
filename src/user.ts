@@ -1,6 +1,7 @@
 import { Meal } from "./meals.js";
+import { TropPauvreErreur } from "./TropPauvreErreur.js";
 
-type Order = {
+export type Order = {
   id: number
   meals: Meal[]
   total: number
@@ -20,16 +21,9 @@ export class User {
   }
 
   orderMeal(meal: Meal){
-    console.log(`deunsLog : try to order meal`, meal)
-    console.log(`deunsLog : check argent`, this.wallet, meal.price )
-    console.log(`deunsLog : order`,{
-      id: this.orderMeal.length+1,
-      meals: [meal],
-      total: meal.price
-    })
     //vérifier si l'utilisateur a assez d'argent
     if(this.wallet < meal.price){
-      throw new Error("Fonds insuffisants")
+      throw new TropPauvreErreur(this.wallet)
     }
 
     //retirer le prix du portefeuille
@@ -49,6 +43,11 @@ export class User {
     const history= localStorage.getItem('history') ? JSON.parse(localStorage.getItem('history')!) : [];
     history.push(order);
     localStorage.setItem('history', JSON.stringify(history));
+    
+    const historyDiv = document.getElementById('history');
+    if (historyDiv) {
+      historyDiv.innerHTML += `<li>${order.meals[0].name} - ${order.meals[0].price}€</li>`;
+    }
   }
 }
 

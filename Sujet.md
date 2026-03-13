@@ -199,8 +199,8 @@ localStorage
 
 À chaque commande :
 
-- sauvegarder l’historique
-- le recharger au démarrage de l’application
+- ✅sauvegarder l’historique
+- ✅le recharger au démarrage de l’application
 
 ---
 
@@ -224,13 +224,13 @@ type MealDraft = Partial<Meal>
 
 ---
 
-# Étape 7 — Manipulation du DOM
+# ✅Étape 7 — Manipulation du DOM
 
 Vous devez manipuler le DOM pour :
 
-- afficher les repas
-- afficher le portefeuille utilisateur
-- afficher l'historique des commandes
+- ✅afficher les repas
+- ✅afficher le portefeuille utilisateur
+- ✅afficher l'historique des commandes
 
 ---
 
