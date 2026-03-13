@@ -1,12 +1,11 @@
-export interface Meal {
-  id: number;
-  name: string;
-  calories: number;
-  price: number;
+export type Meal = {
+  id: number
+  name: string
+  calories: number
+  price: number
 }
 
-
-export async function fetchMeals() {
+export async function fetchMeals(): Promise<Meal[]> {
   try {
     const res = await fetch('https://keligmartin.github.io/api/meals.json');
     
@@ -14,9 +13,11 @@ export async function fetchMeals() {
       throw new Error('err res');
     }
     
-    const data = await res.json();
-    console.log('deunsLog :', data);
+    const data = await res.json() as Meal[];
+    console.log(`data : `, data)
+    return data;
   } catch(err){
-    console.error('erruer')
+    console.error('Erreur lors du chargement des repas')
+    return [];
   }
 }

@@ -6,21 +6,21 @@ Durée : 4h30
 
 Développer une **mini application web en TypeScript** permettant :
 
-- de récupérer des repas depuis une API
+- ✅de récupérer des repas depuis une API
 - de passer des commandes
 - de gérer un portefeuille utilisateur
 - de conserver l’historique des commandes
 
 Contraintes :
 
-- Pas de framework
-- HTML + TypeScript uniquement
-- Le code doit **compiler sans erreur**
-- Le code doit être isolé par cas d'usage (un fichier pour l'api, un ficher pour le user, un pour les repas etc.)
+-✅ Pas de framework
+- ✅HTML + TypeScript uniquement
+- ✅Le code doit **compiler sans erreur**
+- ✅Le code doit être isolé par cas d'usage (un fichier pour l'api, un ficher pour le user, un pour les repas etc.)
 
 ---
 
-# Structure du projet
+# ✅Structure du projet
 
 ```
 /project
@@ -34,9 +34,9 @@ Contraintes :
   tsconfig.json
 ```
 
-Le fichier HTML est fourni.
+✅Le fichier HTML est fourni.
 
-Vous devez principalement travailler dans :
+✅Vous devez principalement travailler dans :
 
 ```
 src/app.ts
@@ -44,19 +44,19 @@ src/app.ts
 
 ---
 
-# Données
+# ✅Données
 
-L’API fournie est disponible à l'adresse suivante : `https://keligmartin.github.io/api/meals.json` 
+✅L’API fournie est disponible à l'adresse suivante : `https://keligmartin.github.io/api/meals.json` 
 
 Vous devrez développer cette méthode pour récupérer les repas :
 ```ts
-fetchMeals(): Promise<Meal[]>
+✅fetchMeals(): Promise<Meal[]>
 ```
 
 L'api retourne :
 
 ```ts
-type Meal = {
+✅type Meal = {
   id: number
   name: string
   calories: number
@@ -64,13 +64,13 @@ type Meal = {
 }
 ```
 
-Cette API peut **échouer aléatoirement**.
+✅Cette API peut **échouer aléatoirement**.
 
-Vous devez donc **gérer les erreurs**.
+✅Vous devez donc **gérer les erreurs**.
 
 ---
 
-# Étape 1 — Modélisation
+# ✅Étape 1 — Modélisation
 
 Créer les types (ou interfaces) suivants :
 
@@ -102,7 +102,7 @@ orders
 
 ---
 
-# Étape 2 — Récupération des repas
+# ✅ Étape 2 — Récupération des repas
 
 Récupérer les repas depuis l’API.
 
@@ -121,17 +121,17 @@ Erreur lors du chargement des repas
 
 ---
 
-# Étape 3 — Affichage des repas
+# ✅ Étape 3 — Affichage des repas
 
-Afficher les repas dans la liste HTML :
+✅Afficher les repas dans la liste HTML :
 
-```
+✅```
 Burger - 10€
 Pizza - 12€
 Salad - 8€
 ```
 
-Dans l’élément :
+✅Dans l’élément :
 
 ```html
 <ul id="mealList"></ul>
