@@ -19,14 +19,15 @@ export class User {
     this.orders = [];
   }
 
-  // function orderMeal(meal: Meal){
-  //   //vérifier si l'utilisateur a assez d'argent
-  //   if(this.wallet < meal.total){
-  //     //faire une meilleure erreur
-  //     throw new Error("Fonds insuffisants")
-  //   }
-  //   //retirer le prix du portefeuille
-  //   //ajouter la commande dans l'historique
-  // }
+  orderMeal(meal: Meal){
+    console.log(`deunsLog : try to order meal`, meal)
+    //vérifier si l'utilisateur a assez d'argent
+    // if(this.wallet < meal.total){
+    //   //faire une meilleure erreur
+    //   throw new Error("Fonds insuffisants")
+    // }
+    //retirer le prix du portefeuille
+    //ajouter la commande dans l'historique
+  }
 }
 
