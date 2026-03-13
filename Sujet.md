@@ -137,7 +137,7 @@ Salad - 8€
 <ul id="mealList"></ul>
 ```
 
-Chaque repas doit avoir un **bouton permettant de le commander**.
+✅Chaque repas doit avoir un **bouton permettant de le commander**.
 
 ---
 

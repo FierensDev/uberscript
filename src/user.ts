@@ -6,7 +6,7 @@ type Order = {
   total: number
 }
 
-class User {
+export class User {
   id: number;
   name: string;
   wallet: number;
@@ -18,4 +18,15 @@ class User {
     this.wallet = wallet;
     this.orders = [];
   }
+
+  // function orderMeal(meal: Meal){
+  //   //vérifier si l'utilisateur a assez d'argent
+  //   if(this.wallet < meal.total){
+  //     //faire une meilleure erreur
+  //     throw new Error("Fonds insuffisants")
+  //   }
+  //   //retirer le prix du portefeuille
+  //   //ajouter la commande dans l'historique
+  // }
 }
+
