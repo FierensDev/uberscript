@@ -7,9 +7,9 @@ Durée : 4h30
 Développer une **mini application web en TypeScript** permettant :
 
 - ✅de récupérer des repas depuis une API
-- de passer des commandes
-- de gérer un portefeuille utilisateur
-- de conserver l’historique des commandes
+- ✅de passer des commandes
+- ✅de gérer un portefeuille utilisateur
+- ✅de conserver l’historique des commandes
 
 Contraintes :
 
@@ -141,7 +141,7 @@ Salad - 8€
 
 ---
 
-# Étape 4 — Portefeuille utilisateur
+# ✅Étape 4 — Portefeuille utilisateur
 
 L'utilisateur possède un **portefeuille**.
 Le portefeuille peut être soit un nombre, soit un objet (et l'utilisateur pourrait avoir plusieurs portefeuilles)
@@ -162,9 +162,9 @@ orderMeal(meal: Meal)
 
 Cette méthode doit :
 
-1. vérifier si l'utilisateur a assez d'argent
-2. retirer le prix du portefeuille
-3. ajouter la commande dans l'historique
+1. ✅vérifier si l'utilisateur a assez d'argent
+2. ✅retirer le prix du portefeuille
+3. ✅ajouter la commande dans l'historique
 
 ---
 
@@ -187,7 +187,7 @@ Exemple :
 
 ---
 
-# Étape 5 — Historique des commandes persistant
+# ✅Étape 5 — Historique des commandes persistant
 
 L'historique des commandes doit être **persistant**.
 

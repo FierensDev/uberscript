@@ -21,13 +21,34 @@ export class User {
 
   orderMeal(meal: Meal){
     console.log(`deunsLog : try to order meal`, meal)
+    console.log(`deunsLog : check argent`, this.wallet, meal.price )
+    console.log(`deunsLog : order`,{
+      id: this.orderMeal.length+1,
+      meals: [meal],
+      total: meal.price
+    })
     //vérifier si l'utilisateur a assez d'argent
-    // if(this.wallet < meal.total){
-    //   //faire une meilleure erreur
-    //   throw new Error("Fonds insuffisants")
-    // }
+    if(this.wallet < meal.price){
+      throw new Error("Fonds insuffisants")
+    }
+
     //retirer le prix du portefeuille
+    this.wallet -= meal.price
+    
     //ajouter la commande dans l'historique
+    const order = {
+      id: this.orderMeal.length+1,
+      meals: [meal],
+      total: meal.price
+    }
+    this.orders.push(order)
+    this.addOrderToHistory(order)
+  }
+
+  addOrderToHistory(order: Order){
+    const history= localStorage.getItem('history') ? JSON.parse(localStorage.getItem('history')!) : [];
+    history.push(order);
+    localStorage.setItem('history', JSON.stringify(history));
   }
 }
 
