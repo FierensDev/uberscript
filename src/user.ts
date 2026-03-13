@@ -23,15 +23,15 @@ export class User {
   orderMeal(meal: Meal){
     //vérifier si l'utilisateur a assez d'argent
     if(this.wallet < meal.price){
-      throw new TropPauvreErreur(this.wallet)
+      throw new TropPauvreErreur(this.wallet, meal.price)
     }
 
     //retirer le prix du portefeuille
     this.wallet -= meal.price
     
     //ajouter la commande dans l'historique
-    const order = {
-      id: this.orderMeal.length+1,
+    const order: Order = {
+      id: this.orders.length+1,
       meals: [meal],
       total: meal.price
     }
@@ -43,11 +43,10 @@ export class User {
     const history= localStorage.getItem('history') ? JSON.parse(localStorage.getItem('history')!) : [];
     history.push(order);
     localStorage.setItem('history', JSON.stringify(history));
-    
-    const historyDiv = document.getElementById('history');
-    if (historyDiv) {
-      historyDiv.innerHTML += `<li>${order.meals[0].name} - ${order.meals[0].price}€</li>`;
-    }
+  }
+
+  totalOrdersSpent(): number {
+    return this.orders.reduce((total, order) => total + order.total, 0);
   }
 }
 

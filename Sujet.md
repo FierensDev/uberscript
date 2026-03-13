@@ -182,8 +182,8 @@ Si il y a un peu plus de détails dans l'erreur c'est évidemment mieux
 
 Exemple :
 
-    - prix restant sur le portefeuille
-    - prix total de la commande
+    - ✅prix restant sur le portefeuille
+    - ✅prix total de la commande
 
 ---
 
@@ -239,7 +239,7 @@ Vous devez manipuler le DOM pour :
 Implémenter une ou plusieurs fonctionnalités :
 
 - possibilité de **supprimer une commande**
-- afficher **le total dépensé**
+- ✅afficher **le total dépensé**
 - filtrer les repas par prix
 - ajouter un **menu contenant plusieurs repas**
 

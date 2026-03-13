@@ -14,7 +14,7 @@ export async function fetchMeals(): Promise<Meal[]> {
     }
     
     const data = await res.json() as Meal[];
-    console.log(`data : `, data)
+    
     return data;
   } catch(err){
     console.error('Erreur lors du chargement des repas')
